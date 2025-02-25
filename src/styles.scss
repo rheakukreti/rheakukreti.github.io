@@ -14,3 +14,16 @@
     max-width: 100%;
     overflow-x: hidden;
 }
+
+@media screen and (max-width: 500px) {
+    body.modal-open {
+        overflow-y: hidden;
+        position: fixed;
+        left: calc((100vw - 300px) / 2);
+    }
+
+    .modal-backdrop.show,
+    .modal-backdrop.fade {
+        transition: opacity 2s ease;
+    }
+}

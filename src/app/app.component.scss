@@ -452,7 +452,30 @@
                                 padding: 0;
     
                                 .popup-image {
-                                    animation: image-scroll-no-hover 10s ease;
+                                    pointer-events: none;
+                                    // animation: image-scroll-no-hover 10s ease;
+                                    animation-duration: 10s;
+                                    animation-timing-function: ease;
+                                    animation-delay: 0s;
+                                    animation-iteration-count: 1;
+                                    animation-direction: normal;
+                                    animation-fill-mode: forwards;
+                                    animation-play-state: running;
+                                    animation-name: image-scroll-no-hover;
+
+                                    -webkit-animation-duration: 10s;
+                                    -webkit-animation-timing-function: ease;
+                                    -webkit-animation-delay: 0s;
+                                    -webkit-animation-iteration-count: 1;
+                                    -webkit-animation-direction: normal;
+                                    -webkit-animation-fill-mode: forwards;
+                                    -webkit-animation-play-state: running;
+                                    -webkit-animation-name: image-scroll-no-hover;
+
+                                    &:hover {
+                                        background-position: unset;
+                                        transition: unset;
+                                    }
                                 }
     
                                 .popup-content {
@@ -466,6 +489,11 @@
                                     .website-info {
                                         margin: 0 0 15px 0;
                                     }
+
+                                    .website-content {
+                                        max-height: 200px;
+                                        overflow-y: scroll;
+                                    }
                                 }
                             }
                         }
@@ -474,6 +502,15 @@
             }
         }
     }
+
+    .fade,
+    .modal.fade .modal-dialog {
+        transition-delay: 1s;
+    }
+
+    // .modal.fade .modal-dialog {
+    //     transition: transform 1s ease-out
+    // }
 }
 
 @keyframes image-scroll-no-hover {

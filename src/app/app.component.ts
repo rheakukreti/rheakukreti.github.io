@@ -60,6 +60,18 @@ export class AppComponent {
     const modalElement = document.getElementById('contentModal') as HTMLElement;
     const modal = new bootstrap.Modal(modalElement);
     modal.show();
+    modalElement.style.display = 'flex !important';
+  }
+
+  ngAfterViewInit(): void {
+    const modalElement = document.getElementById('contentModal');
+
+    if (modalElement) {
+      // When modal is shown, set display to flex
+      modalElement.addEventListener('shown.bs.modal', () => {
+        modalElement.style.display = 'flex';
+      });
+    }
   }
 
   ngOnDestroy(){
