@@ -450,9 +450,10 @@
                             
                             .modal-body {
                                 padding: 0;
+                                max-height: 550px;
+                                overflow-y: scroll;
     
                                 .popup-image {
-                                    pointer-events: none;
                                     // animation: image-scroll-no-hover 10s ease;
                                     animation-duration: 10s;
                                     animation-timing-function: ease;
@@ -471,11 +472,6 @@
                                     -webkit-animation-fill-mode: forwards;
                                     -webkit-animation-play-state: running;
                                     -webkit-animation-name: image-scroll-no-hover;
-
-                                    &:hover {
-                                        background-position: unset;
-                                        transition: unset;
-                                    }
                                 }
     
                                 .popup-content {
@@ -488,11 +484,6 @@
     
                                     .website-info {
                                         margin: 0 0 15px 0;
-                                    }
-
-                                    .website-content {
-                                        max-height: 200px;
-                                        overflow-y: scroll;
                                     }
                                 }
                             }
