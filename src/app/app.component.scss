@@ -444,7 +444,7 @@
                     .modal-dialog {
                         max-width: 100%;
                         width: 100%;
-                        margin-bottom: 130px;
+                        margin-bottom: 110px;
     
                         .modal-content {
                             padding: 20px;
@@ -497,12 +497,8 @@
 
     .fade,
     .modal.fade .modal-dialog {
-        transition-delay: 1s;
+        transition-delay: 0.5s;
     }
-
-    // .modal.fade .modal-dialog {
-    //     transition: transform 1s ease-out
-    // }
 }
 
 @keyframes image-scroll-no-hover {
